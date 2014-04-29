@@ -2,3 +2,12 @@ language: node_js
 node_js:
 - '0.10'
 before_install: npm install -g mocha
+deploy:
+  provider: s3
+  access_key_id: AKIAIQY46GMUAWVNAXGA
+  secret_access_key:
+    secure: gb2AaNo4/HnuycRAul8ckt3ab8gdKeG0yHCM7sokHz59E8leF67SvYfwhoZFNaDpOzcuXHq1nl2h+x5U0e1wzvH2TKBnDMk5T/tK6bl2adaYAL2aBS+VLCnt4IoG5QsIORNGDHwfPSIalNJwEZgSyVBYStqXG/19Q6TtQNv6/94=
+  bucket: deploy-weeia
+  upload-dir: jasinski
+  on:
+    repo: emiljas/ciTestJasinski
